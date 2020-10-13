@@ -1,4 +1,4 @@
-FROM raspbian/stretch
+FROM navikey/raspbian-buster
 
 USER root
 
@@ -96,3 +96,8 @@ RUN apt-get install -y \
     qml-module-qtquick-controls \
     qml-module-qtquick-layouts \
     qml-module-qtquick-window2
+
+RUN apt-get install -y qtdeclarative5-* \
+    qml-module-qtquick* \
+    qtquickcontrols5-* \
+    qml-module-qtquick2
